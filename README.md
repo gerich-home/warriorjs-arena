@@ -1,6 +1,11 @@
 # WarriorJS Arena
 Testing JS warriors on randomly generated levels
 
+## Why?
+You have just designed some warrior in for WarriorJS but how can you know it it the best one?
+
+Just run this script that will generate as many random levels as you want and see how it compares to your friends' warriors!
+
 ## Usage
 
 Clone sources somewhere (there is no npm package for it yet).
@@ -76,3 +81,7 @@ Boolean indicating whether or not to show level image and the score each warrior
 ### showEvents
 Boolean indicating whether or not to show the full log of events at each level. Requires `showDetails` to be set to `true`. False by default.
 
+## TODO
+1. Create npm package
+2. Generate 2D levels
+3. Configure types of units
