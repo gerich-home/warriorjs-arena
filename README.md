@@ -100,7 +100,7 @@ Array of numbers in the interval 1...`numLevels` that specifies what levels shou
 If you want to contribute to the project feel free to take issue from https://github.com/gerich-home/warriorjs-arena/issues or raise new ones!
 
 Also please share your results (as PR or in other way).
-My current results with the command `npm start ./configs/100-levels.json` are the folowwing:
+My current results with the command `npm start ./configs/100-levels.json` are the following:
 ```
 gerich | Passed 68% | Total score 2268
 naive  | Passed 29% | Total score 533
