@@ -101,8 +101,8 @@ If you want to contribute to the project feel free to take issue from https://gi
 
 Also please share your results (as PR or in other way).
 My current results with the command `npm start ./configs/100-levels.json` are the folowwing:
-`
+```
 gerich | Passed 68% | Total score 2268
 naive  | Passed 29% | Total score 533
 runner | Passed 14% | Total score 187
-`
+```
