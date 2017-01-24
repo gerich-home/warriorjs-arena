@@ -99,3 +99,5 @@ Array of numbers in the interval 1...`numLevels` that specifies what levels shou
 ## TODO
 1. Create npm package
 2. Generate 2D levels
+3. Override values from config with values passed as command line arguments
+4. Apply multiple configs instead of just one, so the 2nd can override settings from the 1st
