@@ -258,7 +258,7 @@ function* generateLevels() {
         const numFreeCells = config.numFreeCells || getRandomInt(config.minFreeCells || 0, config.maxFreeCells || 4);
         const width = numUnits + numFreeCells + 2;
         
-        const stairsCell = getRandomOf(0, width);
+        const stairsCell = getRandomOf(0, width - 1);
         const usedCells = [stairsCell];
         
         return {
