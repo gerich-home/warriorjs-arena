@@ -85,3 +85,6 @@ Boolean indicating whether or not to show the full log of events at each level. 
 1. Create npm package
 2. Generate 2D levels
 3. Configure types of units
+4. Configure abilities
+5. Configure the list of warriors to be run (useful for debugging the warrior)
+6. Configure the list of level ids to be run (useful for debugging the warrior, while using the same seed)
