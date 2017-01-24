@@ -46,7 +46,7 @@ Currently the following configuration values are supported:
 The number or string that is used as a seed for the generated levels.
 If omited then each run will be fully random.
 
-### levels
+### numLevels
 The number of levels to generate or 5 by default.
 
 ### timeBonus
@@ -76,3 +76,17 @@ Boolean indicating whether or not to show level image and the score each warrior
 ### showEvents
 Boolean indicating whether or not to show the full log of events at each level. Requires `showDetails` to be set to `true`. False by default.
 
+### units
+Array of strings describing units that can be generated. Default is `["sludge", "thickSludge", "archer", "captive", "wizard"]`.
+
+### actions
+Array of strings describing actions available to the player. Default is `["attack", "bind", "detonate", "explode", "pivot", "rescue", "rest", "shoot", "walk"]`.
+
+### senses
+Array of strings describing senses  available to the player. Default is `["directionOf", "directionOfStairs", "distanceOf", "feel", "health", "listen", "look"]`.
+
+### players
+Array of strings that specifies what players should take part in competition. Defaults to all players available in `/players` directory.
+
+### levels
+Array of numbers in the interval 1...`numLevels` that specifies what levels should be used in the competition. Defaults to all `numLevels` generated levels.

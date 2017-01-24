@@ -1,6 +1,6 @@
 {
     "seed": 1,
-    "levels": 10,
+    "numLevels": 10,
     "showDetails": false,
     "showEvents": false
 }

@@ -1,0 +1,13 @@
+{
+    "seed": 1,
+    "numLevels": 5,
+    "showDetails": true,
+    "showEvents": false,
+    "actions": [
+        "walk",
+        "attack"
+    ],
+    "senses": [
+        "feel"
+    ]
+}

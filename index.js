@@ -148,8 +148,16 @@ const config = process.argv[2] ? require(process.argv[2]) : {};
 
 const random = randomSeed.create(config.seed);
 
-const players = [...getPlayers()];
-const levels = [...generateLevels()];
+const playerFilter = config.players ?
+    ((player) => config.players.indexOf(player.name) >= 0) :
+    (() => true)
+    
+const levelFilter = config.levels ?
+    ((level) => config.levels.indexOf(level.id) >= 0) :
+    (() => true)
+
+const players = [...getPlayers()].filter(playerFilter);
+const levels = [...generateLevels()].filter(levelFilter);
 
 const allStatistics = [];
 
@@ -177,37 +185,14 @@ function* getPlayers() {
 }
 
 function* generateLevels() {
-	const abilities = [{
-			name: 'walk',
+	const abilities = (config.actions || ['attack', 'bind', 'detonate', 'explode', 'pivot', 'rescue', 'rest', 'shoot', 'walk'])
+        .concat(config.senses || ['directionOf', 'directionOfStairs', 'distanceOf', 'feel', 'health', 'listen', 'look'])
+        .map(ability => ({
+			name: ability,
 			args: []
-		}, {
-			name: 'attack',
-			args: []
-		}, {
-			name: 'feel',
-			args: []
-		}, {
-			name: 'rescue',
-			args: []
-		}, {
-			name: 'look',
-			args: []
-		}, {
-			name: 'health',
-			args: []
-		}, {
-			name: 'shoot',
-			args: []
-		}, {
-			name: 'rest',
-			args: []
-		}, {
-			name: 'pivot',
-			args: []
-		}
-	];
+		}));
 
-    for(var i = 0; i < (config.levels || 10); i++) {
+    for(var i = 1; i <= (config.numLevels || 10); i++) {
         var field = getField();
         
         var units = [];
@@ -252,8 +237,12 @@ function* generateLevels() {
         return random(max - min + 1) + min;
     }
     
-    function getRandomOf(...values) {
+    function getRandomOfArray(values) {
         return values[getRandomInt(0, values.length - 1)];
+    }
+    
+    function getRandomOf(...values) {
+        return getRandomOfArray(values);
     }
     
     function getRandomDirection() {
@@ -261,7 +250,7 @@ function* generateLevels() {
     }
     
     function getRandomType() {
-        return getRandomOf('sludge', 'thickSludge', 'archer', 'captive', 'wizard');
+        return getRandomOfArray(config.units || ['sludge', 'thickSludge', 'archer', 'captive', 'wizard']);
     }
     
     function getField() {

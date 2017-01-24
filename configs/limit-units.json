@@ -1,0 +1,12 @@
+{
+    "seed": 2,
+    "numLevels": 5,
+    "showDetails": true,
+    "showEvents": false,
+    "minUnits": 2,
+    "maxUnits": 4,
+    "units": [
+        "archer",
+        "wizard"
+    ]
+}
