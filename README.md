@@ -1,6 +1,11 @@
 # WarriorJS Arena
 Testing JS warriors on randomly generated levels
 
+## Why?
+You have just designed some warrior for [WarriorJS](https://github.com/olistic/warriorjs) but how can you know it it the best one?
+
+Just run this script that will generate as many random levels as you want and see how it compares to your friends' warriors!
+
 ## Usage
 
 Clone sources somewhere (there is no npm package for it yet).
@@ -90,3 +95,7 @@ Array of strings that specifies what players should take part in competition. De
 
 ### levels
 Array of numbers in the interval 1...`numLevels` that specifies what levels should be used in the competition. Defaults to all `numLevels` generated levels.
+
+## TODO
+1. Create npm package
+2. Generate 2D levels
