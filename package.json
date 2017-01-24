@@ -1,0 +1,24 @@
+{
+  "name": "warriorjs-arena",
+  "version": "1.0.0",
+  "description": "Testing JS warriors on randomly generated levels",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node --presets es2015 index.js"
+  },
+  "keywords": [
+    "warriorjs",
+    "test",
+    "game",
+    "arena"
+  ],
+  "author": "Sergey Gerasimov",
+  "license": "MIT",
+  "dependencies": {
+    "warriorjs-engine": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0"
+  }
+}
