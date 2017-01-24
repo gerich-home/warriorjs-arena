@@ -96,8 +96,13 @@ Array of strings that specifies what players should take part in competition. De
 ### levels
 Array of numbers in the interval 1...`numLevels` that specifies what levels should be used in the competition. Defaults to all `numLevels` generated levels.
 
-## TODO
-1. Create npm package
-2. Generate 2D levels
-3. Override values from config with values passed as command line arguments
-4. Apply multiple configs instead of just one, so the 2nd can override settings from the 1st
+## Contributing
+If you want to contribute to the project feel free to take issue from https://github.com/gerich-home/warriorjs-arena/issues or raise new ones!
+
+Also please share your results (as PR or in other way).
+My current results with the command `npm start ./configs/100-levels.json` are the folowwing:
+`
+gerich | Passed 68% | Total score 2268
+naive  | Passed 29% | Total score 533
+runner | Passed 14% | Total score 187
+`
